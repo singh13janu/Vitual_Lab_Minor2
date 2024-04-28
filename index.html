@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html >
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Virtual Lab</title>
+        <link rel="stylesheet" href="style.css" />
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <script src="m.js" defer></script>
+    </head>
+    <body onload="time()">
+        <div class="landing_page">
+            <div class="date_logo">
+                <div class="logo">
+                   <a href="https://www.juet.ac.in/"> <img src="images/juet_logo.jpg" title="Jaypee University of Engineering and Technology Guna in India" alt="This Image is missing" width="40%" height="100%"></a>
+                </div>
+               <div class="date_hours" >
+                    <p id="date">Date</p>
+                    <p id="hour">Hour</p>
+               </div>
+                <div class="social_icon">
+                    <a href="https://www.linkedin.com/school/jaypee-university-of-engineering-and-technology/" ><img src="images/linkedIn.png" title="Linkedin Profile of JUET Guna" alt="This Image is missing" width="97%" height="100%" ></a>
+                </div>
+            </div>
+            <div class="vl_logo">
+                <div class="vl_logo_img">
+                <img src="images/v_lab.png" title="Vitual Lab" alt="This Image is Missing" width="30%" height="100%">
+               </div>
+               <div class="vl_title">
+                <h1 class="h1">Virtual Lab For Experimental Study</h1>
+               </div>
+            </div>
+            <div class="menu_bar">
+                <a href="index.html" class="home" target="_parent">Home</a>
+                <a href="About.html" class="about" target="_parent">About Us</a>
+                <ul  type="none">
+                    <li>
+                        <a href="" class="experiment">Experiment <i class="fas fa-caret-down"></i></a>
+                        <ul class="dropdown_menu" type="none">
+                            
+                               
+                                <li><a href="Thermodynamic.html">Thermodynamic Lab</a></li>
+        
+
+                        </ul>
+                    </li>
+                </ul>
+                    
+                <a href="Project.html" class="project" target="_parent">Project</a>
+                <a href="People.html" class="people" target="_parent">People</a>
+                <a href="Contact_us.html" class="contact" target="_parent">Contact Us</a>
+                <!--<a href="" class="faq">FAQ</a>-->
+            </div>
+             <div class="description">
+                <div class="card">
+                    <p>Weather App</p>
+                    <div class="search">
+                        <input type="text" placeholder="Enter City Name" spellcheck="false">
+                        <button><img src="images/search.png" alt="This Image is Missing">   </button>
+                         <!-- Add WeatherApp -->
+                    </div>
+                    <div class="error">
+                           <p>Invalid city name</p>
+                    </div>
+                    <div class="weather">
+                        <img src="images/rain.png" alt="This Image is Missing" class="weather-icon">
+                        <h1 class="temp">22°C</h1>
+                        <h2 class="city">New York</h2>
+                        <div class="details">
+                            <div class="col">
+                                <img src="images/humidity.png" alt="This Image is Missing">
+                                <div>
+                                    <p class="humidity">50%</p>
+                                    <p>Humidity</p>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <img src="images/wind.png" alt="This Image is Missing">
+                                <div id="gh">
+                                    <p class="wind">15 km/hr</p>
+                                    <p>Wind Speed</p>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="vl_images">
+                       <img src="images/juet.jpg" title="Jaypee University of Engineering and Technology Guna" alt="This Image is missing"  width="100%" height="100%">
+                </div> -->
+                <div class="slider">
+                    <div class="slides">
+                        <input type="radio" name="radio-btn" id="radio1">
+                        <input type="radio" name="radio-btn" id="radio2">
+                        <input type="radio" name="radio-btn" id="radio3">
+                        <input type="radio" name="radio-btn" id="radio4">
+                        
+                        <div class="slide first">
+                            <img src="./images/virtual_lab.jpeg" title="Welcome To Virtual Lab" alt="This Image is Missing">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/lab2.jpeg" alt="This Image is Missing">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/lab3.jpeg" alt="This Image is Missing">
+                        </div>
+                        <div class="slide">
+                            <img src="./images/lab4.jpeg" alt="This Image is Missing">
+                        </div>
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                    </div>
+                    <div class="navigation-manual">
+                        <label for="radio1" class="manual-btn"></label>
+                        <label for="radio2" class="manual-btn"></label>
+                        <label for="radio3" class="manual-btn"></label>
+                        <label for="radio4" class="manual-btn"></label>
+                    </div>
+                </div>
+            
+
+            </div>
+            <br><br><br>
+            <div class="objective">
+                <h2>Objective</h2><br>
+                <p class="p"> The objective of a virtual lab project is to create a simulated environment that replicates the experience of a
+                    physical laboratory in a digital or virtual space. Virtual labs are designed to provide a platform for students, researchers,
+                    or professionals to conduct experiments, analyze data, and gain practical skills in a specific field without the need for physical equipment 
+                    or a traditional laboratory setting.
+                   </p><br><br><br>
+                   <h2>The Philosophy</h2><br>
+                   <p class="p">Good lab facilities and updated lab experiments are critical for any engineering college. Paucity of lab facilities often make it difficult to conduct experiments. 
+                    Also, good teachers are always a scarce resource. The Virtual Labs project addresses this issue of lack of good lab facilities, as well as trained teachers, by providing remote-access
+                     to simulation-based Labs in various disciplines of science and engineering. Yet another objective is to arouse the curiosity of the students and permit them to learn at their own pace. 
+                     This student-centric approach facilitates the absorption of basic and advanced concepts through simulation-based experimentation. Internet-based experimentation further permits use of 
+                     additional web-resources, video-lectures, animated demonstrations and self-evaluation. Specifically, the Virtual Labs project addresses the following:<br><br>
+                    
+                    Access to online labs to those engineering colleges that lack these lab facilities<br>
+                    Access to online labs as a complementary facility to those colleges that already have labs<br>
+                    Training and skill-set augmentation through workshops and on-site/ online training<br><br>
+                    Virtual labs are any place, any pace, any-time, any-type labs. It is a paradigm shift in student-centric, online education.</p>
+                
+                    
+            </div>
+            <!--div class="news">
+                       
+                </!--div-->
+           <div class="footer">
+                <!--<a href="" class="supportive_link">Supportive Links And Address</a>-->
+                <div class="footer_content"></div>
+                <div class="footer_about_vlab">
+                    <p>About Virtual Lab</p><br><br>
+                    <a href="index.html" class="home" target="_parent"><i class="fa-solid fa-house"></i> Home</a><br><br>
+                    <a href="About.html" class="about" target="_parent">About Us</a><br><br>
+                    <a href="Contact_us.html" class="contact" target="_parent">Contact Us</a><br><br>
+                    <a href="People.html" class="people" target="_parent">People</a>
+                </div>
+                <div class="qr"><img class="qr_image" src="images/QR.jpeg" alt="This Image is Missing"  ></div>
+                <div class="footer_contact">
+                    <p class="get_in_touch">Get in Touch With Us</p><br>
+                    <p><i class='bx bxs-envelope'></i> 211b152@juetguna.in</p>
+                    <p><i class='bx bxs-envelope'></i> 211b157@juetguna.in</p>
+                    <p><i class='bx bxs-envelope'></i> 211b295@juetguna.in</p>
+                    <p><i class="fa-solid fa-phone"></i> 9343438546,7049022984</p><p><i class="fa-solid fa-phone"></i> 6393668438</p>
+                    <p><i class="fa-solid fa-location-dot"></i> Wireless Virtual Lab</p>
+                    <p>Room No. : XYZ</p>
+                    <p>Jaypee University Of Engineering And Technology Guna (M.P)</p>
+                </div>            
+            </div>
+        </div>
+
+        <script>
+            const apiKey= "73bf9c3beeecfe779638c2103a227062";
+            const apiUrl= "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+            const searchBox= document.querySelector(".search input");
+            const searchBtn= document.querySelector(".search button");
+            const weatherIcon= document.querySelector(".weather-icon");
+
+            async function checkWeather(city){
+                const response= await fetch(apiUrl + city + `&appid=${apiKey}`);
+                
+                if(response.status == 404){
+                    document.querySelector(".error").style.display = "block"
+                    document.querySelector(".weather").style.display = "none"
+                }
+                else{
+                    var data= await response.json();
+                
+                //console.log(data); 
+             
+ 
+                 document.querySelector(".city").innerHTML = data.name;
+                 document.querySelector(".temp").innerHTML = Math.round(data.main.temp ) + "°C";
+                 document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+                 document.querySelector(".wind").innerHTML = data.wind.speed + " km/hr";
+ 
+                 if(data.weather[0].main == "Clouds"){
+                     weatherIcon.src = "images/clouds.png";
+                 }
+                 else if(data.weather[0].main == "Clear"){
+                     weatherIcon.src = "images/clear.png";
+                 }
+                 else if(data.weather[0].main == "Rain"){
+                     weatherIcon.src = "images/rain.png";
+                 }
+                 else if(data.weather[0].main == "Drizzle"){
+                     weatherIcon.src = "images/drizzle.png";
+                 }
+                 else if(data.weather[0].main == "Mist"){
+                     weatherIcon.src = "images/mist.png";
+                 }
+                 document.querySelector(".weather").style.display = "block"
+                 document.querySelector(".error").style.display = "none"
+                }
+
+
+                
+            }
+
+            searchBtn.addEventListener("click", ()=>{
+                checkWeather(searchBox.value);
+            })
+           
+        </script>
+        <script type="text/javascript">
+            var counter = 1;
+            setInterval(function(){
+                document.getElementById('radio'+counter).checked=true;
+                counter++;
+                if(counter>4){
+                    counter=1;
+                }
+            }, 7000);
+        </script>
+         
+    </body>
+</html>

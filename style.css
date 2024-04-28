@@ -1,0 +1,621 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+.landing_page{
+  width: 100%;
+  height: 707px;
+  background-color: aquamarine;
+}
+.date_logo{
+  width: 100%;
+  height: 10%;
+  background-color: blueviolet;
+}
+.logo{
+  width: 20%;
+  height: 100%;
+  float: left;
+}
+.vl_logo{
+  width: 100%;
+  height: 10%;
+  background-color: lightcyan;
+  font-size: 20px;
+}
+.vl_logo_img{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+.vl_title{
+  width: 50%;
+  height: 100%;
+  float: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+}
+.menu_bar{
+  width: 100%;
+  height: 10%;
+  background-color: #212121;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  
+}
+.description{
+  width: 100%;
+  height: 70%;
+  background-color: #FFF;
+  
+}
+.title{
+  width: 100%;
+  height: 7%;
+  padding-left: 5%;
+  background-color: blue;
+  text-decoration: none;
+  text-align: justify;
+  font-size: 25px;
+  color: #FFF;
+  justify-content: space-between;
+}
+.date_hours{
+  width: 72%;
+  height: 100%;
+  float: left;
+  color: white;
+}
+.social_icon{
+  width: 8%;
+  height: 100%;
+  float: left;
+  
+}
+#date{
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+#hour{
+  font-size: 20px;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+.h1{
+  font-size: 30px;
+  text-align: justify;
+  float: left;
+}
+.h1 span {
+  color: blue;
+}
+.home{
+  font-size: 20px;
+  float: left;
+  text-decoration: none;
+  color: white;
+}
+.objective{
+  width: 100%;
+  height: 100%;
+}
+.about{
+  font-size: 20px;
+  float: left;
+  text-decoration: none;
+  color: white;
+}
+.people{
+  font-size: 20px;
+  float: left;
+  text-decoration: none;
+  color: white;
+}
+.contact{
+  font-size: 20px;
+  float: left;
+  text-decoration: none;
+  color: white;
+}
+ul{
+  
+  list-style: none;
+  background: #010102;
+  text-align: center;
+  
+}
+ul li{
+  display: inline-block;
+  position: relative;
+}
+ul li a{
+  display: block;
+  text-decoration: none;
+  padding:20px 50px !important;
+  font-size: 20px;
+  color: #fff;
+}
+a{
+  text-decoration: none;
+}
+a:hover{
+  color: #b5aeb5;
+}
+.experiment{
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  background-color: #212121;
+}
+ul li ul.dropdown_menu li {
+  display: block;
+
+}
+ul li ul.dropdown_menu{
+  width: 100%;
+  text-align: center;
+  background-color: #22438C;
+  position: absolute;
+  display: none;
+  text-decoration: none;
+
+}
+
+ul li a:hover {
+  background-color: #661111;
+}
+ul li:hover ul.dropdown_menu {
+  display: block;
+}
+.project{
+  font-size: 20px;
+  float: left;
+  text-decoration: none;
+  color: white;
+}
+
+/*.faq{
+  font-size: 25px;
+  float: left;
+  text-decoration: none;
+  color: white;
+}*/
+.card{
+  width: 20%;
+  height: 100%;
+  float: left;
+  background: linear-gradient(135deg, #00feba, #5b548a);
+  color: #fff;
+ /* margin: 100px auto 0;*/
+  /*border-radius: 20px;*/
+  /*padding: 4px 3.5px;*/
+  text-align: center;
+}
+/*.vl_images{
+  width: 60%;
+  height: 100%;
+  background-color: bisque;
+  float: left;
+}
+.news{
+  width: 20%;
+  height: 100%;
+  float: left;
+}*/
+.footer{
+  width: 100%;
+  height: 33%;
+  background-color: #22438C;
+}
+.supportive_link{
+  text-decoration: none;
+  color: white;
+}
+
+/*home page*/
+.home_page{
+width: 100%;
+height: 707px;
+background-color: aquamarine;
+}
+/*about page*/
+.about_page{
+width: 100%;
+height: 707px;
+background-color: aquamarine;
+}
+/*thermodynamic page*/
+.thermodynamic_page{
+width: 100%;
+height: 707px;
+background-color: aquamarine;
+}
+/*project page*/
+.project_page{
+width: 100%;
+height: 707px;
+background-color: aquamarine;
+}
+/*people page*/
+.people_page{
+width: 100%;
+height: 707px;
+background-color: aquamarine;
+}
+/*contact page*/
+.contact_page{
+width: 100%;
+height: 707px;
+background-color: aquamarine;
+}
+
+/*weather app*/
+.search{
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.search input{
+border: 0;
+outline: 0;
+background: #ebfffc;
+color: #555;
+padding: 5px 8px;
+height: 100%;
+border-radius: 50px;
+flex: 1;
+margin-right: 16px;
+font-size: 18px;
+}
+.search button{
+border: 0;
+outline: 0;
+background: #ebfffc;
+border-radius: 50%;
+width: 20%;
+height: 100%;
+cursor: pointer;
+}
+.search button img{
+width: 30px;
+}
+.weather-icon{
+width: 20%;
+margin-top: 30px;
+}
+.weather h1{
+font-size: 80px;
+font-weight: 500;
+}
+.weather h1{
+font-size: 45px;
+font-weight: 400;
+margin-top: -10px;
+}
+.details{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 20px;
+margin-top: 50px;
+}
+.col{
+display: flex;
+align-items: center;
+text-align: left;
+}
+.col img{
+width: 40px;
+margin-right: 10px;
+}
+.humidity, .wind{
+font-size: 28px;
+margin-top: -6px;
+}
+.weather{
+display: none;
+}
+.error{
+text-align: left;
+margin-left: 10px;
+font-size: 14px;
+margin-top: 10px;
+display: none;
+}
+
+
+/* for text file */
+
+.slider{
+  width: 80%;
+  height: 100%;
+  background-color: bisque;
+  float: left;
+  overflow: hidden;
+}
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+.slides input{
+   display: none;
+}
+.slide{
+  width: 20%;
+  transition: 3s;
+
+}
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+.navigation-manual{
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+.manual-btn{
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+
+}
+.manual-btn:hover{
+  background: #40d3dc;
+}
+#radio1:checked ~ .first{
+  margin-left: 0;
+}
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+}
+.navigation-auto div{
+  border: 2px solid #40d3dc;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #40d3dc;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #40d3dc;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #40d3dc;
+}
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #40d3dc;
+}
+
+
+/*About Description*/
+.about_content{
+  width: 80%;
+  height: 63%;
+  float: left;
+}
+
+.about_contact{
+  width: 20%;
+  height: 90%;
+  background-color:#ebfffc;
+  float: left;
+}
+.ulo{
+  background: white;
+
+}
+.Con_us{
+  width: 100%;
+  height: 10%;
+  background-color: #22438C;
+  text-align: center;
+  color:#ebfffc;
+}
+.info{
+  width: 100%;
+  height: 60%;
+}
+h3{
+  justify-content: space-between;
+}
+.vedio{
+  width: 100%;
+  height: 30%;
+}
+#content1{
+  padding-left: 10%;
+  width: 50%;
+  float: left;
+}
+iframe{
+  width: 47%;
+  height: 70%;
+  float: left;
+ 
+}
+h2{
+  text-align: center;
+  text-decoration: underline;
+  justify-content: space-between;
+  text-transform: capitalize;
+  color: #22438C;
+}
+.p{
+  justify-content: space-between;
+  text-decoration: none;
+}
+
+.objective{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.teacher1{
+  width: 100%;
+  height: 31.5%;
+  float: left;
+  padding-left: 5%;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.tech_contact{
+  width: 70%;
+  height: 100%;
+  float: right;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.teacher2{
+  width: 100%;
+  height: 31.5%;
+  float: left;
+  padding-left: 5%;
+  padding-top: 5%;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.h2{
+  font-size: 25px;
+  color: white;
+  text-decoration: none;
+  padding-top: 3%;
+  justify-content: space-between;
+}
+
+/*footer*/
+.footer_content{
+  width: 25%;
+  height: 100%;
+  float: left;
+  justify-content: space-between;
+}
+.footer_about_vlab{
+  width: 25%;
+  height: 100%;
+  float: left;
+  justify-content: space-between;
+ 
+}
+.footer_about_vlab p{
+  padding-top: 3%;
+  color: white;
+  text-decoration: underline;
+}
+.qr{
+  width: 25%;
+  height: 100%;
+  float: left;
+  justify-content: space-between;
+  
+}
+.qr_image{
+  padding-top: 7%;
+  width: 70%;
+  height: 90%;
+  padding-bottom: 5%;
+}
+.footer_contact{
+  width: 25%;
+  height: 100%;
+  float: left;
+  justify-content: space-between;
+}
+.footer_contact p{
+  color: white;
+  text-transform: initial;
+  justify-content: space-between;
+}
+.get_in_touch{
+  padding-top: 3%;
+  text-decoration: underline;
+}
+
+
+/*Experiment*/
+.experiment_description{
+  width: 100%;
+  min-height: 100vh;
+  background: #0b0423;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+#left{
+  width: 25%;
+  min-height: 400px;
+  margin: 20px;
+  border: 2px solid #fff;
+  float: left;
+}
+#right{
+width: 80%;
+min-height: 400px;
+margin: 20px;
+border: 2px dashed #fff;
+float: left;
+}
+.list{
+background: #e91e63;
+height: 60px;
+margin: 60px;
+color: #fff;
+display: flex;
+align-items: center;
+cursor: grab;
+}
+.list img{
+width: 50px;
+margin-right: 15px;
+margin-left: 20px;
+}
+
+

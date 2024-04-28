@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Source Temperature Impact</title>
+    <style>
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        #graph-container {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h2>Source Temperature Impact</h2>
+    <div id="graph-container">
+        <canvas id="graph" width="400" height="300"></canvas>
+    </div>
+    <div>
+        <label for="T_source">Source Temperature (°C):</label>
+        <input type="number" id="T_source"><br>
+        
+        <label for="T_min">Minimum Sink Temperature (°C):</label>
+        <input type="number" id="T_min"><br>
+
+        <label for="n">Number of Data Points:</label>
+        <input type="number" id="n"><br>
+
+        <button onclick="showResult()">Show Result</button>
+        <button onclick="resetForm()">Reset</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function linspace(start, stop, num) {
+            const step = (stop - start) / (num - 1);
+            const arr = [];
+            for (let i = 0; i < num; i++) {
+                arr.push(start + step * i);
+            }
+            return arr;
+        }
+
+        function K(t) {
+            return t;
+        }
+
+        function showResult() {
+            const T_source = parseFloat(document.getElementById('T_source').value);
+            const T_min = parseFloat(document.getElementById('T_min').value);
+            const n = parseInt(document.getElementById('n').value);
+
+            const T_sink = linspace(T_min, T_source, n);
+            const eta = T_sink.map(t => 1 - K(t) / K(T_source));
+
+            let result = "<table><tr><th>T_sink (°C)</th><th>eta (%)</th></tr>";
+            for (let i = 0; i < n; i++) {
+                result += `<tr><td>${T_sink[i]}</td><td>${eta[i]}</td></tr>`;
+            }
+            result += "</table>";
+
+            document.getElementById('result').innerHTML = result;
+
+            // Plotting
+            const canvas = document.getElementById('graph');
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width;
+            const height = canvas.height;
+
+            ctx.clearRect(0, 0, width, height);
+
+            const xScale = width / (T_source - T_min);
+            const yScale = height / 1; // Scale for the range [0, 1]
+
+            ctx.beginPath();
+            ctx.moveTo(0, height);
+            ctx.lineTo(width, height);
+            ctx.moveTo(0, height);
+            ctx.lineTo(0, 0);
+            ctx.strokeStyle = 'black';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.font = "12px Arial";
+            ctx.fillText("T_sink (°C)", width / 2, height + 20);
+            ctx.fillText("eta (%)", -20, height / 2);
+            ctx.fillText(T_min, 0, height + 20);
+            ctx.fillText(T_source, width, height + 20);
+            ctx.fillText("0", -10, height + 5);
+            ctx.fillText("1", -15, 10); // Changed to "1" for y-axis max value
+
+            ctx.strokeStyle = 'red';
+            ctx.lineWidth = 2;
+
+            ctx.beginPath();
+            ctx.moveTo(T_sink[0] * xScale, height - eta[0] * yScale);
+            for (let i = 1; i < n; i++) {
+                ctx.lineTo(T_sink[i] * xScale, height - eta[i] * yScale);
+            }
+            ctx.stroke();
+
+            // Draw circles and make them interactive
+            ctx.fillStyle = 'blue';
+            for (let i = 0; i < n; i++) {
+                ctx.beginPath();
+                ctx.arc(T_sink[i] * xScale, height - eta[i] * yScale, 5, 0, Math.PI * 2);
+                ctx.fill();
+                ctx.closePath();
+
+                // Add event listeners to circles
+                canvas.addEventListener('mousemove', function(event) {
+                    const rect = canvas.getBoundingClientRect();
+                    const mouseX = event.clientX - rect.left;
+                    const mouseY = event.clientY - rect.top;
+
+                    const distance = Math.sqrt((mouseX - T_sink[i] * xScale) ** 2 + (mouseY - (height - eta[i] * yScale)) ** 2);
+                    if (distance <= 5) {
+                        ctx.clearRect(0, 0, width, 20);
+                        ctx.fillStyle = 'black';
+                        ctx.fillText(`T_sink: ${T_sink[i]}°C, eta: ${eta[i]}`, 10, 15);
+                    }
+                });
+            }
+        }
+
+        function resetForm() {
+            document.getElementById('T_source').value = '';
+            document.getElementById('T_min').value = '';
+            document.getElementById('n').value = '';
+            document.getElementById('result').innerHTML = '';
+
+            const canvas = document.getElementById('graph');
+            const ctx = canvas.getContext('2d');
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+        }
+    </script>
+</body>
+</html>
